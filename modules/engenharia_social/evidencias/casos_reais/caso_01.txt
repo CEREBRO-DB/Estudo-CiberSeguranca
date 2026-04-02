@@ -63,10 +63,8 @@ FASE 1: Authority Bias (Viés de Autoridade)
       Isso causa: diminuição de questionamento, execução automática de instruções, confiança sem verificação.
 
 🧠 6. ERROS HUMANOS COMUNS
-     não verificar domínio do e-mail
-     não confirmar via canal secundário
-     ignorar inconsistências visuais
-     agir sob pressão de tempo
+     não verificar domínio do e-mail, não confirmar via canal secundário, ignorar inconsistências visuais,
+     agir sob pressão de tempo.
 
 🧠 7. SINAIS DE ALERTA (DEFESA)
    🚨 Indicadores típicos: pedido urgente fora do padrão, mudança de senha sem solicitação prévia, links externos para            login.
