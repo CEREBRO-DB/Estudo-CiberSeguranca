@@ -1,15 +1,19 @@
 🧠 1) ATAQUE DE AUTORIDADE + COLETA DE CREDENCIAIS
 (CEO / TI / “reset de senha urgente”)
+
 🎯 Caso real (padrão Microsoft 365 / empresas SaaS)
+
 🧩 Cenário
 Atacante se passa por:
 TI interno
 ou gerente/CEO
 vítima: funcionário comum
+
 ⚙️ Técnica usada
 Pretexting (falsa identidade)
 Authority Bias (viés de autoridade)
 Urgência artificial
+
 🧠 Cadeia do ataque
 Atacante coleta dados via OSINT:
 LinkedIn (cargo, equipe)
@@ -20,14 +24,19 @@ Envia mensagem:
 Redireciona para página falsa:
 clone de login Microsoft / Google
 vítima insere credenciais
+
 🎯 Resultado real
 acesso a e-mail corporativo
 acesso a sistemas internos (SSO)
 pivot para outras contas
 ⚠️ POR QUE FUNCIONA
+
 urgência bloqueia análise crítica
 autoridade reduz desconfiança
 login parece legítimo (clone perfeito)
+
+#######################################################################
+
 🧠 2) ATAQUE DE MANIPULAÇÃO DE RESPOSTA
 (conversa contínua / engenharia de decisão)
 🎯 Caso real (suporte técnico / helpdesk)
@@ -41,6 +50,7 @@ mantém conversa ativa
 Conversational manipulation
 Gradual commitment
 Cognitive overload
+
 🧠 Cadeia do ataque
 atacante inicia contato:
 “não consigo acessar sistema X”
@@ -52,6 +62,7 @@ vítima começa a “ajudar demais”
 atacante pede:
 redefinição manual
 bypass de MFA
+
 🎯 Resultado real
 reset de credenciais
 bypass de autenticação
@@ -60,9 +71,14 @@ acesso interno sem phishing direto
 vítima quer resolver problema
 excesso de interação reduz cautela
 engenharia de “confiança progressiva”
+
+##############################################################################################
+
 🧠 3) ATAQUE DE CLICK VOLUNTÁRIO
 (social media / link malicioso indireto)
+
 🎯 Caso real (campanhas via LinkedIn / Telegram / Discord)
+
 🧩 Cenário
 mensagem parece inofensiva:
 “arquivo compartilhado”
@@ -72,6 +88,7 @@ mensagem parece inofensiva:
 Baiting
 Curiosity trigger
 Perceived value manipulation
+
 🧠 Cadeia do ataque
 vítima recebe link:
 “CV atualizado da vaga”
@@ -81,14 +98,17 @@ link leva a:
 página de login falsa
 ou download de malware
 vítima clica voluntariamente
+
 🎯 Resultado real
 credential harvesting
 infostealer instalado
 sessão roubada (cookies/token)
+
 ⚠️ POR QUE FUNCIONA
 não parece ataque
 ativa curiosidade ou oportunidade
 baixa percepção de risco
+
 🧠 CONCLUSÃO PHANTOM (PADRÃO MODERNO)
 🔥 Os 3 pilares mais usados hoje:
 Autoridade
