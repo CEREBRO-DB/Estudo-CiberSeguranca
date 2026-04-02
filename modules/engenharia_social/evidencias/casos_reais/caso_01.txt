@@ -4,36 +4,24 @@
 🎯 Caso real (padrão Microsoft 365 / empresas SaaS)
 
 🧩 Cenário
-Atacante se passa por:
-TI interno
-ou gerente/CEO
-vítima: funcionário comum
+Atacante se passa por um técnico de TI interno ou gerente/CEO
+vítima: funcionário comum, provavelmente ja tinha sido estudado pelo atacante para ler comportamentos.
 
-⚙️ Técnica usada
-Pretexting (falsa identidade)
+⚙️ Técnica usada: Pretexting (falsa identidade) -> Grnade aceitação por vítimas ainda mais quando não tem o mínimo de conhecimento tecnico na área.
 Authority Bias (viés de autoridade)
-Urgência artificial
+Urgência artificial -> Um tencica muito usada, pois o cérebro sob pressão discarta o raciocinio lógico.
 
-🧠 Cadeia do ataque
-Atacante coleta dados via OSINT:
-LinkedIn (cargo, equipe)
-e-mail corporativo
-Envia mensagem:
-“reset de senha imediato”
-“conta será bloqueada”
-Redireciona para página falsa:
-clone de login Microsoft / Google
-vítima insere credenciais
+🧠 Cadeia do ataque: Atacante coleta dados via OSINT:(Nomes, Cargos, E-mail, Telefones, Endereços etc).
+Envia mensagem: “reset de senha imediato”, “conta será bloqueada”, 
+Redireciona para página falsa: clone de login Microsoft / Google -> página falsas semelhante as originais, usuário não tem hábito de conferir veracidade e autenticidade de páginas web ou similares.
+vítima insere credenciais: Insere nome de usários, senhas, dados de cadastros sigilosos, pessoais ou das empresas.
 
-🎯 Resultado real
-acesso a e-mail corporativo
-acesso a sistemas internos (SSO)
-pivot para outras contas
+🎯 Resultado real: acesso a e-mail corporativo, contas do facebook, instagram, páginas de banco, acesso a sistemas internos (SSO) pivot para outras contas.
+
 ⚠️ POR QUE FUNCIONA
-
-urgência bloqueia análise crítica
-autoridade reduz desconfiança
-login parece legítimo (clone perfeito)
+*urgência bloqueia análise crítica
+*Autoridade reduz desconfiança
+*Login parece legítimo (clone perfeito)
 
 #######################################################################
 
