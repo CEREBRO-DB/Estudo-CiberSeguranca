@@ -1,0 +1,8 @@
+def scan_target(target):
+    print(f"[REDES] Escaneando: {target}")
+
+def run_exploit(target):
+    print(f"[EXPLOIT] Executando em: {target}")
+
+def simulate_phishing(target):
+    print(f"[ENG SOCIAL] Simulando ataque em: {target}")
