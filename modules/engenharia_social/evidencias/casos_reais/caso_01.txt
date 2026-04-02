@@ -24,10 +24,10 @@ vítima insere credenciais: Insere nome de usários, senhas, dados de cadastros 
 *Login parece legítimo (clone perfeito)
 #######################################################################
 
-->DIAGNÓSTICO DO ATAQUE<-
+***->DIAGNÓSTICO DO ATAQUE<-***
 
-ENGINEERING PSICOLÓGICA (Engenharia Piscológica)
 FASE 1: Authority Bias (Viés de Autoridade)
+ENGINEERING PSICOLÓGICA (Engenharia Piscológica)
 
 1. O QUE É (tradução)
  English: Authority Bias
@@ -72,4 +72,52 @@ FASE 1: Authority Bias (Viés de Autoridade)
 
 🧠 8. RESUMO TÁTICO
    🎯 Authority Bias =“Eu acredito porque parece alguém acima de mim na hierarquia”
+
+FASE 2: Fear of Loss (Medo de Perda)
+
+🧠 DEFINIÇÃO
+   É um viés cognitivo onde: pessoas reagem mais fortemente à possibilidade de perder algo do que à possibilidade de          ganhar algo equivalente.
+
+🧠 2. COMO ISSO FUNCIONA NA MENTE HUMANA
+ ⚙️ Processo psicológico:
+     O cérebro detecta ameaça: conta bloqueada, acesso perdido, dados inacessíveis.
+     Ativa resposta emocional: ansiedade, urgência, medo de impacto.
+     Reduz pensamento lógico: foco vira “evitar perda”.
+
+🧠 3. POR QUE ISSO É EXPLORÁVEL EM ATAQUES
+   🎯 Em engenharia social isso é poderoso porque:
+         medo substitui análise, urgência substitui verificação, emoção substitui lógica.
+
+
+4. COMO ISSO É USADO EM ATAQUES (MECANISMO)
+🔥 Padrão típico:
+     1. Criar ameaça de perda
+     Exemplos comuns: “sua conta será bloqueada”, “acesso expirando”, “dados serão apagados”, “atividade suspeita               detectada”.
+     2. Reduzir tempo de decisão: “agir agora”, “última chance”, “responda imediatamente”.
+     3. Oferecer solução falsa: link de “verificação”, login falso, formulário de recuperação.
+
+🧠 5. POR QUE FUNCIONA (FATOR CENTRAL)
+⚠️ Mecanismo psicológico: O cérebro prioriza evitar perda imediata em vez de avaliar autenticidade.
+     Isso gera: decisões rápidas, baixa verificação, comportamento automático.
+
+🧠 6. ERROS HUMANOS EXPLORADOS
+    acreditar em bloqueio sem confirmação, clicar em link sob pressão, ignorar domínio/URL, não consultar canal oficial.
+
+🧠 7. SINAIS DE ATAQUE (DEFESA)
+   🚨 Indicadores comuns: ameaça de perda imediata, linguagem de urgência extrema, pedido de ação sem contexto prévio
+       links externos para “resolver problema”.
+
+🧠 8. RESUMO TÁTICO
+   🎯 Fear of Loss = “Eu preciso agir agora para não perder algo importante”.
+
+
+
+
+
+
+
+
+
+
+
 
