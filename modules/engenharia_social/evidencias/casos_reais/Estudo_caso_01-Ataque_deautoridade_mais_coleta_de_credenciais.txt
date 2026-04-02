@@ -1,0 +1,46 @@
+ATAQUE DE AUTORIDADE + COLETA DE CREDENCIAIS
+
+(CEO / TI / “reset de senha urgente”)
+
+🎯 Caso real (padrão Microsoft 365 / empresas SaaS)
+
+🧩 Cenário
+Atacante se passa por:
+TI interno
+ou gerente/CEO
+vítima: funcionário comum
+⚙️ Técnica usada
+Pretexting (falsa identidade)
+Authority Bias (viés de autoridade)
+Urgência artificial
+
+
+
+
+
+🧠 Cadeia do ataque
+Atacante coleta dados via OSINT:
+LinkedIn (cargo, equipe)
+e-mail corporativo
+Envia mensagem:
+“reset de senha imediato”
+“conta será bloqueada”
+Redireciona para página falsa:
+clone de login Microsoft / Google
+vítima insere credenciais
+
+
+
+
+🎯 Resultado real
+acesso a e-mail corporativo
+acesso a sistemas internos (SSO)
+pivot para outras contas
+
+
+
+
+⚠️ POR QUE FUNCIONA
+urgência bloqueia análise crítica
+autoridade reduz desconfiança
+login parece legítimo (clone perfeito)
