@@ -25,7 +25,7 @@ def check_nmap():
 
 def install_dependencies():
     print("📦 Instalando bibliotecas Python...")
-    libs = ["streamlit", "python-nmap", "requests", "psutil", "python-dotenv", "shodan"]
+    libs = ["streamlit", "python-nmap", "requests", "psutil", "python-dotenv", "shodan", "scapy"]
     try:
         subprocess.check_call([sys.executable, "-m", "pip", "install", *libs])
         print("✅ Bibliotecas instaladas com sucesso.")

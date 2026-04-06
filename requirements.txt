@@ -4,3 +4,5 @@ python-dotenv
 shodan
 pydantic
 pandas
+scapy
+python-nmap
