@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação Oficial | CÉREBRO-V3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .sidebar { height: 100vh; position: sticky; top: 0; padding-top: 20px; background: #212529; color: white; }
+        .nav-link { color: #adb5bd; }
+        .nav-link:hover { color: white; }
+        .active-link { color: #0d6efd !important; font-weight: bold; }
+        section { padding: 60px 0; border-bottom: 1px solid #dee2e6; }
+        code { background: #e9ecef; padding: 2px 4px; border-radius: 4px; color: #d63384; }
+        .card-agent { border-left: 5px solid #0d6efd; }
+        .law-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <div class="position-sticky">
+                <h5 class="px-3 text-primary">CÉREBRO-V3</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#introducao">Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#agentes">Agentes e Funcionalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#integracoes">Integrações e DB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#arquitetura">Estrutura de Arquivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#manual">Manual de Instruções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#juridico">Políticas e Direitos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lgpd">Conscientização LGPD</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            
+            <section id="introducao">
+                <h1 class="display-4">Documentação Técnica CÉREBRO-V3</h1>
+                <p class="lead">O CÉREBRO-V3 é um ecossistema avançado de auditoria de segurança cibernética, focado em automação de reconhecimento, análise de vulnerabilidades e defesa proativa.</p>
+                <hr>
+                <h3>Versões e Ferramentas Usadas</h3>
+                <ul>
+                    <li><strong>Linguagem:</strong> Python 3.10+</li>
+                    <li><strong>Interface:</strong> Streamlit 1.32.0</li>
+                    <li><strong>Reconhecimento:</strong> Nmap (Network Mapper) via <code>python-nmap</code></li>
+                    <li><strong>Inteligência:</strong> GitHub API v3</li>
+                    <li><strong>Persistência:</strong> JSON (NoSQL-style local database)</li>
+                </ul>
+            </section>
+
+            <section id="agentes">
+                <h2>🤖 Os Agentes do Ecossistema</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 card-agent shadow-sm p-3">
+                            <h4>🛰️ Orion (Reconhecimento)</h4>
+                            <p>Responsável pelo mapeamento de rede. Executa scans de portas, detecção de SO e identificação de serviços (Scripts NSE).</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 card-agent shadow-sm p-3 border-danger">
+                            <h4>💣 Vektor (Exploração)</h4>
+                            <p>Cruza vulnerabilidades encontradas com exploits reais do GitHub e Exploit-DB. Focado em prova de conceito (PoC).</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 card-agent shadow-sm p-3 border-success">
+                            <h4>🛡️ Aegis (Defesa)</h4>
+                            <p>Gera protocolos de remediação. Transforma uma falha técnica em um plano de ação (Hardening) para o administrador.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 card-agent shadow-sm p-3 border-warning">
+                            <h4>🧠 BrainSync (Sincronização)</h4>
+                            <p>O "coração" do sistema. Busca novas ameaças via API e alimenta os outros agentes em tempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="integracoes">
+                <h2>🔗 Integrações e Base de Dados</h2>
+                <p>O sistema utiliza um modelo de <strong>Inteligência Síncrona</strong>:</p>
+                <ul>
+                    <li><strong>GitHub API:</strong> Busca dinâmica de CVEs e exploits usando <code>GITHUB_TOKEN</code>.</li>
+                    <li><strong>intelligence_core.json:</strong> Banco de dados local que armazena o histórico de ameaças, evitando requisições desnecessárias e permitindo uso offline.</li>
+                    <li><strong>Nmap NSE:</strong> Integração com a biblioteca de scripts do Nmap para auditoria profunda de protocolos.</li>
+                </ul>
+            </section>
+
+            <section id="arquitetura">
+                <h2>📂 Estrutura de Arquivos e Importes</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr><th>Arquivo</th><th>Função Principal</th><th>Importes Chave</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>main.py</code></td><td>Orquestrador da UI e navegação</td><td><code>streamlit</code>, <code>dotenv</code></td></tr>
+                            <tr><td><code>brain_sync.py</code></td><td>Coleta de dados e API GitHub</td><td><code>requests</code>, <code>json</code>, <code>datetime</code></td></tr>
+                            <tr><td><code>orion.py</code></td><td>Execução de scans de rede</td><td><code>nmap</code></td></tr>
+                            <tr><td><code>data/intelligence_core.json</code></td><td>Repositório de inteligência</td><td>N/A (JSON)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="manual">
+                <h2>📖 Manual de Instruções</h2>
+                <ol>
+                    <li><strong>Configuração:</strong> Insira seu <code>GITHUB_TOKEN</code> no arquivo <code>.env</code>.</li>
+                    <li><strong>Sincronização:</strong> Clique em "Sincronizar Ecossistema" para baixar os exploits mais recentes.</li>
+                    <li><strong>Auditoria:</strong> No módulo Orion, insira o IP alvo e defina o nível de scan.</li>
+                    <li><strong>Análise:</strong> Verifique na Central de Inteligência se existem exploits compatíveis com as falhas encontradas.</li>
+                    <li><strong>Defesa:</strong> Utilize o Aegis para gerar o relatório de correção.</li>
+                </ol>
+            </section>
+
+            <section id="juridico">
+                <h2>⚖️ Termos Jurídicos e Direitos Autorais</h2>
+                <p>Este software é uma ferramenta de <strong>Educação e Teste de Penetração Ético</strong>.</p>
+                
+                <div class="law-box mb-4">
+                    <h5>Direitos Autorais e Propriedade Intelectual</h5>
+                    <p>O código-fonte e a arquitetura do CÉREBRO-V3 são de propriedade do desenvolvedor. A engenharia reversa ou distribuição não autorizada é protegida pela <strong>Lei nº 9.609/98 (Lei do Software)</strong> e <strong>Lei nº 9.610/98 (Lei de Direitos Autorais)</strong>.</p>
+                </div>
+
+                <div class="alert alert-danger">
+                    <h5>Uso Indevido e Crimes Cibernéticos</h5>
+                    <p>O uso deste software em redes de terceiros sem autorização expressa constitui crime previsto na <strong>Lei nº 12.737/2012 (Lei Carolina Dieckmann)</strong>, especificamente o Artigo 154-A: "Invadir dispositivo informático alheio...".</p>
+                    <p>Pena: Detenção de 1 a 4 anos e multa.</p>
+                </div>
+            </section>
+
+            <section id="lgpd">
+                <h2>🛡️ Conscientização e LGPD</h2>
+                <p>A <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong> regula o tratamento de dados pessoais. Ao utilizar o CÉREBRO-V3, o usuário deve estar ciente:</p>
+                <ul>
+                    <li><strong>Privacidade:</strong> Scans de rede podem capturar informações sensíveis (MAC addresses, Hostnames). O tratamento desses dados deve respeitar a finalidade legítima.</li>
+                    <li><strong>Responsabilidade:</strong> O operador da ferramenta é o <strong>Controlador de Dados</strong> e responde legalmente por qualquer vazamento ou uso ilícito das informações coletadas durante a auditoria.</li>
+                    <li><strong>Ética:</strong> A ferramenta deve ser usada para fortalecer a segurança de dados, nunca para comprometê-la.</li>
+                </ul>
+            </section>
+
+            <footer class="py-5 text-center text-muted">
+                <p>&copy; 2026 CÉREBRO-V3 Ecosystem. Todos os direitos reservados.</p>
+            </footer>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
